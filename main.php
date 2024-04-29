@@ -1,6 +1,5 @@
 <?php
 
-
 ?>
 
 <!DOCTYPE html>
@@ -25,60 +24,32 @@
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav mr-auto">
-                        <?php
-                        $menuItems = array(
-                            array("Books", "books.php"),
-                            array("Authors", "authors.php"),
-                            array("Publishers", "publishers.php"),
-                            array("Members", "members.php"),
-                            array("Borrowings", "borrowings.php"),
-                            array("Reservations", "reservations.php"),
-                            array("Reviews", "reviews.php")
-                        );
-
-                        foreach ($menuItems as $menuItem) {
-                            echo "<li class='nav-item'>";
-                            echo "<a class='nav-link' href='{$menuItem[1]}'onclick='navigateTo(\"{$menuItem[1]}\")'> {$menuItem[0]}</a>";
-                            echo "</li>";
-                        }
-                        ?>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="books.php">Books</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="authors.php">Authors</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="publishers.php">Publishers</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="members.php">Members</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="borrowings.php">Borrowings</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="reservations.php">Reservations</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="reviews.php">Reviews</a>
+                        </li>
                     </ul>
                 </div>
             </div>
         </nav>
     </div>
-    <div class="container-fluid">
-        <table class="table">
-            <thead>
-                <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">First</th>
-                    <th scope="col">Last</th>
-                    <th scope="col">Handle</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <th scope="row">1</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                </tr>
-                <tr>
-                    <th scope="row">2</th>
-                    <td>Jacob</td>
-                    <td>Thornton</td>
-                    <td>@fat</td>
-                </tr>
-                <tr>
-                    <th scope="row">3</th>
-                    <td colspan="2">Larry the Bird</td>
-                    <td>@twitter</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-
 
 </body>
 
