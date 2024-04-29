@@ -10,7 +10,7 @@ include 'dbconnect.php';
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="books.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <title>Document</title>
+    <title>Books</title>
 </head>
 
 <body>
@@ -21,6 +21,7 @@ include 'dbconnect.php';
             <table class="table">
                 <thead style="background-color: rgb(0, 109, 211); color: white; text-align: left;">
                     <tr>
+                        <th>Book ID</th>
                         <th>Title</th>
                         <th>Author</th>
                         <th>ISBN</th>
@@ -40,12 +41,13 @@ include 'dbconnect.php';
                     <?php
                     $sql = "SELECT b.*, a.author_name 
                     FROM books b 
-                    INNER JOIN author a ON b.author_id = a.author_id";
+                    INNER JOIN author a ON a.author_id = a.author_id";
                     $result = $conn->query($sql);
 
                     if ($result->num_rows > 0) {
                         while ($row = $result->fetch_assoc()) {
                             echo "<tr>";
+                            echo "<td>" . $row["book_id"] . "</td>";
                             echo "<td>" . $row["title"] . "</td>";
                             echo "<td>" . $row["author_name"] . "</td>";
                             echo "<td>" . $row["isbn"] . "</td>";

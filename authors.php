@@ -8,18 +8,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="books.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <title>Document</title>
+    <title>Authors</title>
 </head>
 
 <body>
     <?php include 'main.php'; ?>
     <div class="container-fluid">
-        <h2>Author List</h2>
+        <h2>Author</h2>
         <div class="table-container">
             <table class="table">
                 <thead style="background-color: rgb(0, 109, 211); color: white; text-align: left;">
                     <tr>
-                        <th>Author ID</th>
+                        <th>ID</th>
                         <th>Name</th>
                         <th>Biography</th>
                         <th>Nationality</th>
