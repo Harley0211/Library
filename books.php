@@ -1,5 +1,6 @@
 <?php
 include 'dbconnect.php';
+include 'index.php';
 ?>
 
 <!DOCTYPE html>
@@ -14,7 +15,6 @@ include 'dbconnect.php';
 </head>
 
 <body>
-    <?php include 'main.php'; ?>
     <div class="container-fluid">
         <h2>Book List</h2>
         <div class="table-container">

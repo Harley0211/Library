@@ -12,7 +12,6 @@
 </head>
 
 <body>
-    <?php include 'main.php'; ?>
     <div class="container-fluid">
         <h2>Author</h2>
         <div class="table-container">

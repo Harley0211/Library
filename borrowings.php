@@ -14,7 +14,6 @@ include 'dbconnect.php';
 </head>
 
 <body>
-    <?php include 'main.php'; ?>
     <div class="container-fluid">
         <h2>Borrowings</h2>
         <div class="table-container">
@@ -22,30 +21,25 @@ include 'dbconnect.php';
                 <thead style="background-color: rgb(0, 109, 211); color: white; text-align: left;">
                     <tr>
                         <th>ID</th>
-                        <th>Name</th>
-                        <th>Email</th>
-                        <th>Phone</th>
-                        <th>Address</th>
-                        <th>Status</th>
-                        <th>Type</th>
+                        <th>Date Borrowed</th>
+                        <th>Date Return</th>
+                        <th>Actual Return Date</th>
+                        <th>Penalty Fee</th>
                     </tr>
                 </thead>
                 <tbody>
                     <?php
-                    $sql = "SELECT * FROM publisher";
+                    $sql = "SELECT * FROM borrowing";
                     $result = $conn->query($sql);
 
                     if ($result->num_rows > 0) {
                         while ($row = $result->fetch_assoc()) {
                             echo "<tr>";
-                            echo "<td>" . $row["member_id"] . "</td>";
-                            echo "<td>" . $row["name"] . "</td>";
-                            echo "<td>" . $row["email"] . "</td>";
-                            echo "<td>" . $row["phone"] . "</td>";
-                            echo "<td>" . $row["address"] . "</td>";
-                            echo "<td>" . $row["membership_status"] . "</td>";
-                            echo "<td>" . $row["membership_type"] . "</td>";
-
+                            echo "<td>" . $row["borrowing_id"] . "</td>";
+                            echo "<td>" . $row["borrow_date"] . "</td>";
+                            echo "<td>" . $row["return_date"] . "</td>";
+                            echo "<td>" . $row["actual_return_date"] . "</td>";
+                            echo "<td>" . $row["fine_amount"] . "</td>";
                             echo "</tr>";
                         }
                     } else {

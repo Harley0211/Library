@@ -14,7 +14,6 @@ include 'dbconnect.php';
 </head>
 
 <body>
-    <?php include 'main.php'; ?>
     <div class="container-fluid">
         <h2>Members</h2>
         <div class="table-container">
