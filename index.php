@@ -70,6 +70,7 @@
         </aside>
         <div class="main p-3">
             <div class="text-center">
+                <?php include 'books.php'; ?>
 
             </div>
         </div>
