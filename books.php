@@ -16,7 +16,13 @@ include 'dbconnect.php';
 <body>
     <div class="container-fluid">
         <h2>Book List</h2>
-        <button id="addButton">Add Book</button>
+        <div class="search-container">
+            <input type="text" class="search-input" placeholder="Search...">
+            <button class="search-button"><i class="fas fa-search"></i></button>
+        </div>
+        <div class="button-container">
+            <button id="addButton" onclick="toggleEditForm()">Add</button>
+        </div>
         <div class="table-container">
             <table class="table">
                 <thead style="background-color: rgb(0, 109, 211); color: white; text-align: left;">
@@ -37,36 +43,7 @@ include 'dbconnect.php';
                     </tr>
                 </thead>
                 <tbody>
-                    <?php
-                    // Fetch book data from the database and display it in the table
-                    $sql = "SELECT b.*, a.author_name 
-                    FROM books b 
-                    INNER JOIN author a ON a.author_id = a.author_id";
-                    $result = $conn->query($sql);
 
-                    if ($result->num_rows > 0) {
-                        while ($row = $result->fetch_assoc()) {
-                            echo "<tr>";
-                            echo "<td>" . $row["book_id"] . "</td>";
-                            echo "<td>" . $row["title"] . "</td>";
-                            echo "<td>" . $row["author_name"] . "</td>";
-                            echo "<td>" . $row["isbn"] . "</td>";
-                            echo "<td>" . $row["genre_id"] . "</td>";
-                            echo "<td>" . $row["publication_year"] . "</td>";
-                            echo "<td>" . $row["publisher_id"] . "</td>";
-                            echo "<td>" . $row["edition"] . "</td>";
-                            echo "<td>" . $row["language"] . "</td>";
-                            echo "<td>" . $row["description"] . "</td>";
-                            echo "<td>" . $row["price"] . "</td>";
-                            echo "<td>" . $row["copies_available"] . "</td>";
-                            echo "<td>" . $row["total_copies"] . "</td>";
-                            echo "</tr>";
-                        }
-                    } else {
-                        echo "<tr><td colspan='12'>No data found</td></tr>";
-                    }
-                    $conn->close();
-                    ?>
                 </tbody>
             </table>
         </div>
@@ -120,9 +97,14 @@ include 'dbconnect.php';
     </div>
 
     <script>
-        document.getElementById("addButton").addEventListener("click", function() {
-            document.getElementById("addBookForm").style.display = "block";
-        });
+        function toggleEditForm() {
+            var editForm = document.getElementById("addBookForm");
+            if (editForm.style.display === "none") {
+                editForm.style.display = "block";
+            } else {
+                editForm.style.display = "none";
+            }
+        }
     </script>
 </body>
 
