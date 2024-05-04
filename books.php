@@ -1,6 +1,34 @@
 <?php
 include 'dbconnect.php';
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $id = $_POST['book_id'];
+    $title = $_POST['bookTitle'];
+    $author = $_POST['author'];
+    $isbn = $_POST['isbn'];
+    $genre = $_POST['genre'];
+    $publicationYear = $_POST['publicationYear'];
+    $publisher = $_POST['publisher'];
+    $edition = $_POST['edition'];
+    $language = $_POST['language'];
+    $description = $_POST['description'];
+    $price = $_POST['price'];
+    $copiesAvailable = $_POST['copiesAvailable'];
+    $totalCopies = $_POST['totalCopies'];
+
+    $sql = "INSERT INTO books (book_id, title, author_name, isbn, genre_name, publication_year, publisher_name, edition, language, description, price, copies_available, total_copies) 
+            VALUES ('$id', '$title', '$author', '$isbn', '$genre', '$publicationYear', '$publisher', '$edition', '$language', '$description', '$price', '$copiesAvailable', '$totalCopies')";
+
+    if ($conn->query($sql) === TRUE) {
+        header("Location: books.php");
+        exit();
+    } else {
+        echo "Error: " . $sql . "<br>" . $conn->error;
+    }
+}
 ?>
+
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -50,9 +78,9 @@ include 'dbconnect.php';
 
         <div id="addBookForm" style="display: none;">
             <h3>Add Book</h3>
-            <form action="add_book.php" method="POST">
+            <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="POST">
                 <label for="id">Book ID</label>
-                <input type="text" id="bookTitle" name="bookTitle" required><br><br>
+                <input type="text" id="book_id" name="book_id" required><br><br>
 
                 <label for="bookTitle">Title:</label>
                 <input type="text" id="bookTitle" name="bookTitle" required><br><br>

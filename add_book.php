@@ -1,23 +1,16 @@
 <?php
 include 'dbconnect.php';
 
-$sql_authors = "SELECT * FROM author";
-$result_authors = $conn->query($sql_authors);
-
-$sql_genres = "SELECT * FROM genre";
-$result_genres = $conn->query($sql_genres);
-
-$sql_publishers = "SELECT * FROM publisher";
-$result_publishers = $conn->query($sql_publishers);
-
+// Check if the form is submitted
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Retrieve form data
     $id = $_POST['book_id'];
     $title = $_POST['title'];
-    $author = $_POST['author_name'];
+    $author = $_POST['author']; // Assuming you have a dropdown or autocomplete for selecting the author
     $isbn = $_POST['isbn'];
-    $genre = $_POST['genre_name'];
+    $genre = $_POST['genre']; // Assuming you have a dropdown or autocomplete for selecting the genre
     $publicationYear = $_POST['publication_year'];
-    $publisher = $_POST['publisher_name'];
+    $publisher = $_POST['publisher']; // Assuming you have a dropdown or autocomplete for selecting the publisher
     $edition = $_POST['edition'];
     $language = $_POST['language'];
     $description = $_POST['description'];
@@ -33,6 +26,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     } else {
         echo "Error: " . $sql . "<br>" . $conn->error;
     }
-
-    $conn->close();
 }
+
+$conn->close();
