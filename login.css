@@ -1,0 +1,21 @@
+.w3-panel{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: #3C5B6F;
+    color: white;
+    box-shadow: 5px 10px 8px 10px #888888;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    max-width: 500px;
+    margin: auto;
+
+    
+
+}
+
+
+
+.btn{
+    color: white;
+}
+
