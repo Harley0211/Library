@@ -7,7 +7,8 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://cdn.lineicons.com/4.0/lineicons.css" rel="stylesheet" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <title>Library</title>
+    <title>BNSF Portal</title>
+    <link rel="icon" href="icons/bnsf.png" type="image/x-icon">
 </head>
 
 <body>
@@ -18,7 +19,7 @@
                     <i class="lni lni-grid-alt"></i>
                 </button>
                 <div class="sidebar-logo">
-                    <a href="#">Library</a>
+                    <a href="#">BNSF Portal</a>
                 </div>
             </div>
             <ul class="sidebar-nav">
@@ -69,6 +70,8 @@
             </ul>
         </aside>
         <div class="content">
+            <?php
+            include 'header.php'; ?>
             <?php
             if (isset($_GET['page'])) {
                 $page = $_GET['page'];

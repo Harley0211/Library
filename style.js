@@ -7,7 +7,6 @@ document.addEventListener("DOMContentLoaded", function() {
     toggleSidebar();
   });
 
-  // Function to toggle sidebar and main content
   function toggleSidebar() {
     sidebar.classList.toggle("expand");
     mainContent.classList.toggle("move-right");

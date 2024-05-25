@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,21 +11,22 @@
 
     <title>Login</title>
 </head>
+
 <body>
 
-    <center>
-        <div class="w3-panel">
-            <div class="users">
-                <h1>Login As</h1>
-                <button type="button" class="btn">Admin</button>
-                <button type="button" class="btn">Teacher</button>
-                <button type="button" class="btn">Student</button>
-            </div> 
 
+    <div class="w3-panel position-absolute top-50 start-50 translate-middle">
+        <div class="users text-center">
+            <h1>Login As</h1>
+            <button type="button" class="btn">Admin</button>
+            <button type="button" class="btn">Teacher</button>
+            <button type="button" class="btn">Student</button>
         </div>
 
-  
-    </center>
-    
+    </div>
+
+
+
 </body>
+
 </html>

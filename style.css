@@ -62,8 +62,17 @@ body {
 }
 
 .toggle-btn i{
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
     font-size: 1.5rem;
     color: white;
+    content: url("icons/bnsf.png"); 
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 2.7rem;
+    height: 2.7rem;
+    margin: 1rem 0 0 -.5rem;
 }
 
 .sidebar-logo{

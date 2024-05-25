@@ -1,6 +1,6 @@
 .w3-panel{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    background-color: #3C5B6F;
+    background-color: rgba(73, 109, 133, 0.8);
     color: white;
     box-shadow: 5px 10px 8px 10px #888888;
     width: 50%;
@@ -8,14 +8,29 @@
     justify-content: center;
     max-width: 500px;
     margin: auto;
-
-    
+    border: 2px solid white; 
+    backdrop-filter: blur(10px); 
+    border-radius: 10px; 
 
 }
 
-
-
 .btn{
     color: white;
+    background-color: #007bff; 
+    border: none;
+    padding: 10px 20px;
+    margin-top: 10px; 
+    border-radius: 5px;
+    
+}
+.btn:hover {
+    background-color: #0056b3; 
+}
+
+.users {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px; 
 }
 
