@@ -19,7 +19,7 @@
                     <i class="lni lni-grid-alt"></i>
                 </button>
                 <div class="sidebar-logo">
-                    <a href="#">BNSF Portal</a>
+                    <a href="index.php?page=home">BNSF Portal</a>
                 </div>
             </div>
             <ul class="sidebar-nav">
@@ -70,34 +70,38 @@
             </ul>
         </aside>
         <div class="content">
-            <?php
-            include 'header.php'; ?>
+            <?php include 'header.php'; ?>
             <?php
             if (isset($_GET['page'])) {
                 $page = $_GET['page'];
+            } else {
+                $page = 'home';
+            }
 
-                switch ($page) {
-                    case 'books':
-                        include 'books.php';
-                        break;
-                    case 'authors':
-                        include 'authors.php';
-                        break;
-                    case 'publishers':
-                        include 'publishers.php';
-                        break;
-                    case 'members':
-                        include 'members.php';
-                        break;
-                    case 'borrowings':
-                        include 'borrowings.php';
-                        break;
-                    case 'reviews':
-                        include 'reviews.php';
-                        break;
-                    default:
-                        echo "Page not found";
-                }
+            switch ($page) {
+                case 'home':
+                    include 'Home.php';
+                    break;
+                case 'books':
+                    include 'books.php';
+                    break;
+                case 'authors':
+                    include 'authors.php';
+                    break;
+                case 'publishers':
+                    include 'publishers.php';
+                    break;
+                case 'members':
+                    include 'members.php';
+                    break;
+                case 'borrowings':
+                    include 'borrowings.php';
+                    break;
+                case 'reviews':
+                    include 'reviews.php';
+                    break;
+                default:
+                    echo "Page not found";
             }
             ?>
         </div>
@@ -105,6 +109,5 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
     <script src="style.js"></script>
 </body>
-
 
 </html>

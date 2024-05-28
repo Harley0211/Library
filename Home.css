@@ -1,0 +1,21 @@
+.advertisement-container {
+    position: relative;
+    height: 427px;
+    width: 1368px;
+    margin: 0 auto; 
+}
+.advertisement-container img {
+    height: 100%;
+    width: 100%;
+}
+.btn-join {
+    background-color: #FFA500 !important; 
+    font-size: 1.25rem;
+    color: white; 
+    border-radius: 5px;
+    padding: 0.5rem 1.5rem;
+    position: absolute;
+    top: 80%; 
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
