@@ -3,7 +3,7 @@ session_start(); // Start session to store user login state
 
 include 'dbconnect.php';
 
-if (isset($_POST['login'])) {
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $email = $_POST['email'];
     $password = $_POST['password'];
 
@@ -21,12 +21,13 @@ if (isset($_POST['login'])) {
         // Verify password
         if (password_verify($password, $hashed_password)) {
             // Password is correct, set session variables for user
+            $_SESSION['loggedin'] = true;
             $_SESSION['user_id'] = $row['id'];
             $_SESSION['user_email'] = $row['email'];
             $_SESSION['user_role'] = $row['login_as'];
 
             // Redirect user to dashboard or appropriate page
-            header("Location: dashboard.php");
+            header("Location: adminD.php");
             exit();
         } else {
             // Incorrect password
@@ -35,7 +36,9 @@ if (isset($_POST['login'])) {
             exit();
         }
     } else {
-        // User not found, display alert
-        echo "<script>alert('User not found. Please check your email.');</script>";
+        // User not found
+        $_SESSION['login_error'] = "Invalid email or password";
+        header("Location: index.php"); // Redirect back to login page
+        exit();
     }
 }
