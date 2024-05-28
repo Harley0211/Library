@@ -26,7 +26,7 @@
                 <li class="sidebar-item">
                     <a href="index.php?page=books" class="sidebar-link">
                         <i class="lni lni-book"></i>
-                        <span>Books</span>
+                        <span>Users</span>
                     </a>
                 </li>
                 <li class="sidebar-item">
