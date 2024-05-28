@@ -2,7 +2,7 @@
 $servername = "localhost";
 $username = "root";
 $password = "";
-$dbname = "library";
+$dbname = "bnsf";
 
 $conn = new mysqli($servername, $username, $password, $dbname);
 

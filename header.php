@@ -11,10 +11,10 @@
 <body>
     <header class="d-flex justify-content-between align-items-center p-2 bg-light">
         <h1 class="logo">Home</h1>
-        <form class="d-flex align-items-center">
-            <input type="email" class="form-control me-1" placeholder="Email" aria-label="Email">
-            <input type="password" class="form-control me-1" placeholder="Password" aria-label="Password">
-            <button class="btn btn-primary" type="submit">Login</button>
+        <form class="d-flex align-items-center" method="POST" action="login.php">
+            <input type="email" name="email" class="form-control me-1" placeholder="Email" aria-label="Email" required>
+            <input type="password" name="password" class="form-control me-1" placeholder="Password" aria-label="Password" required>
+            <button class="btn btn-primary" type="submit" name="login">Login</button>
             <button class="btn btn-signup" type="button">Sign Up</button>
         </form>
     </header>
