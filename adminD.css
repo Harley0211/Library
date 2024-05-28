@@ -1,0 +1,157 @@
+/* adminD.css */
+.notification-panel {
+    position: fixed;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    width: 361px;
+    height: 661px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+    padding: 20px;
+}
+
+.notification-title {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    background-color: #f3f3f3;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.notification {
+    margin-bottom: 20px;
+}
+
+.user-info {
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+}
+
+.action-buttons button {
+    margin-right: 10px;
+}
+
+.btn-accept {
+    color: #fff;
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.btn-decline {
+    color: #fff;
+    background-color: #dc3545;
+    border-color: #dc3545;
+}
+
+.button-container {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.button {
+    width: 303px;
+    height: 103px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    color: white;
+}
+
+.student {
+    background-color: #003268;
+}
+
+.teacher {
+    background-color: #FFA500;
+}
+
+.icon {
+    margin-left: 10px;
+    font-size: 24px;
+}
+
+.spacer {
+    width: 20px;
+}
+
+.container {
+    display: flex;
+    justify-content: left;
+    align-items: center; 
+}
+
+.table-container {
+    margin-top: 50px;
+    width: 900px;
+    height: 677px;
+    overflow: auto;
+}
+
+.tables-panel {
+    width: 962px;
+    height: 677px;
+    overflow: auto; 
+}
+
+.visually-hidden {
+    position: absolute;
+    clip: rect(1px, 1px, 1px, 1px);
+    padding: 0;
+    border: 0;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+
+.btn-check:checked + .btn-outline-custom {
+    background-color: #FFA500;
+    color: #000;
+}
+
+.btn-outline-custom {
+    color: #000;
+    background-color: transparent;
+    border-color: #003268;
+}
+
+.btn-outline-custom:hover {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.btn-outline-custom:focus {
+    box-shadow: 0 0 0 0.25rem rgba(0, 123, 255, 0.25);
+}
+
+
+.btn-group .btn-check:checked + .btn-outline-primary, 
+.btn-group .btn-outline-primary:not(:disabled):not(.disabled):active, 
+.btn-group .btn-outline-primary:not(:disabled):not(.disabled):active:focus, 
+.btn-group .btn-outline-primary:focus {
+    color: #FFA500;
+    border-color: #FFA500;
+}
+
+.btn-group .btn-check:checked + .btn-outline-primary:focus, 
+.btn-group .btn-outline-primary:not(:disabled):not(.disabled):active:focus {
+    box-shadow: 0 0 0 0.25rem rgba(255, 165, 0, 0.5);
+}
+
+
+.btn-group{
+    position: relative;
+    top: 20px; /* Adjust the top position */
+    left: 350px; /* Adjust the left position */
+
+}
+
