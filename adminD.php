@@ -30,51 +30,29 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
                     <a href="adminD.php">Admin Portal</a>
                 </div>
             </div>
-            <ul class="sidebar-nav">
-                <li class="sidebar-item">
-                    <a href="adminD.php?page=members" class="sidebar-link">
-                        <i class="lni lni-book"></i>
-                        <span>Users</span>
-                    </a>
-                </li>
-                <li class="sidebar-item">
-                    <a href="#" class="sidebar-link collapsed has-dropdown" data-bs-toggle="collapse" data-bs-target="#auth" aria-expanded="false" aria-controls="auth">
-                        <i class="lni lni-layers"></i>
-                        <span>Menu</span>
-                    </a>
-                    <ul id="auth" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
-                        <li class="sidebar-item">
-                            <a href="adminD.php?page=authors" class="sidebar-link">
-                                <i class="lni lni-users"></i>
-                                <span>Authors</span>
-                            </a>
-                        </li>
-                        <li class="sidebar-item">
-                            <a href="adminD.php?page=publishers" class="sidebar-link">
-                                <i class="lni lni-notepad"></i>
-                                <span>Publishers</span>
-                            </a>
-                        </li>
-                        <li class="sidebar-item">
-                            <a href="adminD.php?page=members" class="sidebar-link">
-                                <i class="lni lni-database"></i>
-                                <span>Members</span>
-                            </a>
-                        </li>
-                        <li class="sidebar-item">
-                            <a href="adminD.php?page=borrowings" class="sidebar-link">
-                                <i class="lni lni-shopping-basket"></i>
-                                <span>Borrowings</span>
-                            </a>
-                        </li>
-                        <li class="sidebar-item">
-                            <a href="adminD.php?page=reviews" class="sidebar-link">
-                                <i class="lni lni-magnifier"></i>
-                                <span>Reviews</span>
-                            </a>
-                        </li>
-                    </ul>
-                </li>
+
+            </li>
+            <li class="sidebar-item">
+                <a href="#" class="sidebar-link collapsed has-dropdown" data-bs-toggle="collapse" data-bs-target="#auth" aria-expanded="false" aria-controls="auth">
+                    <i class="lni lni-layers"></i>
+                    <span>Menu</span>
+                </a>
+                <ul id="auth" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
+                    <li class="sidebar-item">
+                        <a href="adminD.php?page=teachers" class="sidebar-link">
+                            <i class="lni lni-users"></i>
+                            <span>Teachers</span>
+                        </a>
+                    </li>
+                    <li class="sidebar-item">
+                        <a href="adminD.php?page=students" class="sidebar-link">
+                            <i class="lni lni-users"></i>
+                            <span>Students</span>
+                        </a>
+                    </li>
+
+                </ul>
+            </li>
             </ul>
         </aside>
         <div class="content">
@@ -193,26 +171,19 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
                 <?php
                 if (isset($_GET['page'])) {
                     $page = $_GET['page'];
+                } else {
+                    $page = 'home';
+                }
 
-                    switch ($page) {
-                        case 'members':
-                            include 'members.php';
-                            break;
-                        case 'authors':
-                            include 'authors.php';
-                            break;
-                        case 'publishers':
-                            include 'publishers.php';
-                            break;
-                        case 'borrowings':
-                            include 'borrowings.php';
-                            break;
-                        case 'reviews':
-                            include 'reviews.php';
-                            break;
-                        default:
-                            echo "<h1>Page not found</h1>";
-                    }
+                switch ($page) {
+                    case 'teachers':
+                        include 'teachers.php';
+                        break;
+                    case 'students':
+                        include 'students.php';
+                        break;
+                    default:
+                        echo "<h1>Page not found</h1>";
                 }
                 ?>
             </div>

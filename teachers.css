@@ -1,0 +1,11 @@
+.card {
+    width: 287px; /* Fixed width */
+    height: 369px; /* Fixed height */
+    overflow: hidden; /* Hide overflow */
+}
+
+.card-img-top {
+    width: auto; /* Auto width */
+    height: 100%; /* Fill the height of the card */
+    object-fit: contain; /* Fit the entire image within the card */
+}

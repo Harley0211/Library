@@ -22,7 +22,7 @@
                     <a href="index.php?page=home">BNSF Portal</a>
                 </div>
             </div>
-            <ul class="sidebar-nav">
+            <!--<ul class="sidebar-nav">
                 <li class="sidebar-item">
                     <a href="index.php?page=books" class="sidebar-link">
                         <i class="lni lni-book"></i>
@@ -38,7 +38,7 @@
                         <li class="sidebar-item">
                             <a href="index.php?page=authors" class="sidebar-link">
                                 <i class="lni lni-users"></i>
-                                <span>Authors</span>
+                                <span aria-disabled="true">Authors</span>
                             </a>
                         </li>
                         <li class="sidebar-item">
@@ -67,7 +67,7 @@
                         </li>
                     </ul>
                 </li>
-            </ul>
+            </ul>-->
         </aside>
         <div class="content">
             <?php include 'header.php'; ?>
